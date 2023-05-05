@@ -23,7 +23,7 @@ class MyUser(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=30, unique=True)
     email = models.EmailField(unique=True)
     gender = models.CharField(max_length=35, null=True, blank=True)
-    age = models.DecimalField(max_digits=3, decimal_places=3, null=True, blank=True)
+    age = models.CharField(max_length=3, null=True, blank=True)
     skin_tone = models.CharField(max_length=35, null=True, blank=True)
     body_shape = models.CharField(max_length=35, null=True, blank=True)
     mobile_number = models.CharField(max_length=12, null=True, blank=True)
